@@ -16,3 +16,30 @@ The Naming Service, implemented using Netflix Eureka, is responsible for service
 
 ###  Monitoring and Logging with Micrometer
 For monitoring and logging, the project integrates Micrometer, a powerful instrumentation library. Micrometer provides a consistent API for collecting metrics across different components of the system. It is configured to work with popular monitoring systems like Prometheus and Grafana, enabling real-time monitoring of application performance, health checks, and logs.
+
+### Currency Exchange Service
+> http://localhost:8000/currency-exchange/from/USD/to/INR
+
+### Currency Conversion Service
+> http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+> http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+### Eureka (Naming Server)
+> http://localhost:8761/
+
+### API GATEWAY
+> http://localhost:8765/currency-exchange/from/USD/to/INR
+
+> http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+
+> http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+> http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+
+## Docker Images 
+> jeevith2/mmv3-currency-exchange-service:0.0.1-SNAPSHOT
+
+> jeevith2/mmv3-naming-server:0.0.1-SNAPSHOT
+
+> jeevith2/mmv3-currency-conversion-service:0.0.1-SNAPSHOT
